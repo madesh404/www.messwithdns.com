@@ -19,3 +19,24 @@ The purpose of this lab was to understand:
 - How websites are connected to hosting providers
 - How email is routed using MX records
 - How different DNS record types control different internet services
+
+---
+
+# 🌐 Part 1: Website Setup (Netlify + CNAME)
+
+## 🔧 Setup Steps
+
+1. Created a simple static website using HTML
+2. Deployed the site using Netlify
+3. Received a Netlify-generated domain (e.g. `random-site.netlify.app`)
+4. Configured a custom domain on Netlify:
+
+www.squid366.messwithdns.com
+
+5. Added a CNAME record in Mess With DNS:
+
+www → random-site.netlify.app
+
+
+
+
