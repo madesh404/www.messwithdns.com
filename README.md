@@ -48,5 +48,44 @@ http://www.squid366.messwithdns.com
 
 successfully loads the Netlify-hosted website.
 
+---
+
+## 🧠 Key Concept Learned
+
+- A **CNAME record** maps a domain to another domain.
+- DNS resolves the alias to the actual hosting provider.
 - Web hosting services like Netlify rely on DNS for routing traffic.
 
+---
+
+# 📧 Part 2: Email Setup (Fastmail + MX Records)
+
+## 🔧 Setup Steps
+
+1. Signed up for Fastmail
+2. Configured a custom email domain:
+
+you@mail.squid366.messwithdns.com
+
+3. Added two MX records in Mess With DNS:
+
+mail → in1-smtp.messagingengine.com (priority 10)
+mail → in2-smtp.messagingengine.com (priority 20)
+
+4. Sent a test email from Gmail to:
+
+you@mail.squid366.messwithdns.com
+
+5. Email successfully arrived in Fastmail inbox
+
+---
+
+## 📡 Result
+
+Email routing worked successfully using DNS MX records.
+
+---
+
+- A working email system via MX records
+
+Together, they show how DNS underpins nearly all internet communication.
