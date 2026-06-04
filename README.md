@@ -224,6 +224,7 @@ DNS acts as the **address book of the internet**, mapping human-readable domain 
 - Mess With DNS: https://messwithdns.com
 - Netlify: https://www.netlify.com
 - Fastmail: https://www.fastmail.com
+- SPF Test: https://www.appmaildev.com/en/spf
 
 ---
 
