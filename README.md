@@ -195,20 +195,17 @@ The receiving mail server retrieves the public key from DNS and verifies the sig
 
 ---
 
-# 🔍 What This Experiment Proved
+# 🔍 What This Project Demonstrated
 
-| Service | DNS Record Type | Example |
-|--------|----------------|--------|
-| Website | CNAME / A record | Netlify hosting |
-| Email | MX record | Fastmail inbox |
-| Email | SPF TXT record | Verify Fastmail |
-| Email | DKIM CNAME record | Crptography|
+This project explored three major uses of DNS:
 
-* DNS TXT and CNAME records can be used for email authentication.
-* Fastmail was authorized to send email on behalf of the domain.
-* Receiving mail servers successfully validated SPF policies.
-* DKIM signatures were successfully verified.
-* Outgoing email from the custom domain could be trusted as legitimate.
+| Service              | DNS Record Type | Purpose                                  |
+| -------------------- | --------------- | ---------------------------------------- |
+| Website Hosting      | CNAME           | Route web traffic to Netlify             |
+| Email Delivery       | MX              | Route incoming email to Fastmail         |
+| Email Authentication | TXT / CNAME     | Verify outgoing email using SPF and DKIM |
+
+The experiments demonstrated that DNS serves as a foundational internet service that directs traffic to the correct systems and enables secure communication between services.
 
 ---
 
