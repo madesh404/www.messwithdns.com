@@ -8,3 +8,14 @@ This project demonstrates how the Domain Name System (DNS) is used to route both
 - 📧 Email traffic (using MX records)
 
 The experiment was completed using [Mess With DNS](https://messwithdns.com), Netlify, and Fastmail.
+
+---
+
+## 🧪 Experiment Goals
+
+The purpose of this lab was to understand:
+
+- How DNS maps domain names to services
+- How websites are connected to hosting providers
+- How email is routed using MX records
+- How different DNS record types control different internet services
