@@ -97,6 +97,16 @@ Email routing worked successfully using DNS MX records.
 
 ---
 
+# 🔐 Part 3: Email Authentication (SPF + DKIM)
+
+## 🎯 Objective
+
+The goal of this experiment was to configure SPF and DKIM DNS records so that outgoing email from the custom domain could be authenticated by receiving mail servers.
+
+This helps prevent email spoofing and improves email deliverability by proving that messages are authorized by the domain owner.
+
+---
+
 # 🔍 What This Experiment Proved
 
 This project demonstrates that DNS is not just for websites.
