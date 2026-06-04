@@ -107,6 +107,94 @@ This helps prevent email spoofing and improves email deliverability by proving t
 
 ---
 
+## 🔧 Setup Steps
+
+1. Completed the custom email setup from Part 2 using Fastmail.
+2. Followed Fastmail's domain authentication instructions.
+3. Added the required SPF TXT record to DNS.
+4. Added the required DKIM CNAME records to DNS.
+5. Waited for DNS propagation.
+6. Verified that Fastmail detected the records successfully.
+7. Sent a test email from the custom domain to a Gmail account.
+8. Examined the email headers using Gmail's **Show Original** feature.
+
+---
+
+## 📡 DNS Records Configured
+
+### SPF Record
+
+SPF (Sender Policy Framework) specifies which mail servers are authorized to send email on behalf of the domain.
+
+```text
+Type: TXT
+Value: v=spf1 include:spf.messagingengine.com ?all
+```
+
+### DKIM Records
+
+DKIM (DomainKeys Identified Mail) uses cryptographic signatures to verify that outgoing messages are authentic and have not been modified.
+
+Three DKIM CNAME records were configured:
+
+```text
+fm1._domainkey.mail.squid366.messwithdns.com
+fm2._domainkey.mail.squid366.messwithdns.com
+fm3._domainkey.mail.squid366.messwithdns.com
+```
+
+---
+
+## ✅ Verification
+
+The SPF and DKIM records were verified using multiple methods:
+
+### DNS Verification
+
+Confirmed that DNS records were publicly resolvable using:
+
+```bash
+nslookup -type=TXT mail.squid366.messwithdns.com
+nslookup fm1._domainkey.mail.squid366.messwithdns.com
+```
+
+### Gmail Verification
+
+A test message was sent from the Fastmail account to Gmail.
+
+Using Gmail's **Show Original** feature, the email headers reported:
+
+```text
+SPF=PASS
+DKIM=PASS
+```
+
+Additionally, Gmail displayed:
+
+```text
+mailed-by: mail.squid366.messwithdns.com
+```
+
+confirming successful SPF validation.
+
+---
+
+## 🧠 Key Concepts Learned
+
+### SPF (Sender Policy Framework)
+
+SPF allows domain owners to specify which mail servers are permitted to send email on behalf of their domain.
+
+Receiving mail servers check the SPF record during delivery and determine whether the sending server is authorized.
+
+### DKIM (DomainKeys Identified Mail)
+
+DKIM uses public-key cryptography to digitally sign outgoing messages.
+
+The receiving mail server retrieves the public key from DNS and verifies the signature to ensure the message is authentic and has not been altered in transit.
+
+---
+
 # 🔍 What This Experiment Proved
 
 This project demonstrates that DNS is not just for websites.
@@ -117,6 +205,14 @@ It routes multiple types of internet services:
 |--------|----------------|--------|
 | Website | CNAME / A record | Netlify hosting |
 | Email | MX record | Fastmail inbox |
+| Email | SPF TXT record | Verify Fastmail |
+| Email | DKIM CNAME record | Crptography|
+
+* DNS TXT and CNAME records can be used for email authentication.
+* Fastmail was authorized to send email on behalf of the domain.
+* Receiving mail servers successfully validated SPF policies.
+* DKIM signatures were successfully verified.
+* Outgoing email from the custom domain could be trusted as legitimate.
 
 ---
 
