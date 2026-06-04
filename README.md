@@ -38,5 +38,15 @@ www.squid366.messwithdns.com
 www → random-site.netlify.app
 
 
+## 📡 Result
 
+Visiting:
+
+
+http://www.squid366.messwithdns.com
+
+
+successfully loads the Netlify-hosted website.
+
+- Web hosting services like Netlify rely on DNS for routing traffic.
 
