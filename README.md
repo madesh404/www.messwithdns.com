@@ -107,16 +107,26 @@ This helps prevent email spoofing and improves email deliverability by proving t
 
 ---
 
-# 🔍 What This Experiment Proved
+# 🔐 Part 3: Email Authentication (SPF + DKIM)
 
-This project demonstrates that DNS is not just for websites.
+## 🎯 Objective
 
-It routes multiple types of internet services:
+The goal of this experiment was to configure SPF and DKIM DNS records so that outgoing email from the custom domain could be authenticated by receiving mail servers.
 
-| Service | DNS Record Type | Example |
-|--------|----------------|--------|
-| Website | CNAME / A record | Netlify hosting |
-| Email | MX record | Fastmail inbox |
+This helps prevent email spoofing and improves email deliverability by proving that messages are authorized by the domain owner.
+
+---
+
+## 🔧 Setup Steps
+
+1. Completed the custom email setup from Part 2 using Fastmail.
+2. Followed Fastmail's domain authentication instructions.
+3. Added the required SPF TXT record to DNS.
+4. Added the required DKIM CNAME records to DNS.
+5. Waited for DNS propagation.
+6. Verified that Fastmail detected the records successfully.
+7. Sent a test email from the custom domain to a Gmail account.
+8. Examined the email headers using Gmail's **Show Original** feature.
 
 ---
 
