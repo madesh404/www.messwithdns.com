@@ -96,3 +96,51 @@ Email routing worked successfully using DNS MX records.
 - Mail server (storage)
 
 ---
+
+# 🔍 What This Experiment Proved
+
+This project demonstrates that DNS is not just for websites.
+
+It routes multiple types of internet services:
+
+| Service | DNS Record Type | Example |
+|--------|----------------|--------|
+| Website | CNAME / A record | Netlify hosting |
+| Email | MX record | Fastmail inbox |
+
+---
+
+## 🧠 Final Understanding
+
+DNS acts as the **address book of the internet**, mapping human-readable domain names to different services:
+
+- Websites → hosting providers
+- Emails → mail servers
+- Other services → specialized DNS records
+
+---
+
+## 🚀 Tools Used
+
+- Mess With DNS: https://messwithdns.com
+- Netlify: https://www.netlify.com
+- Fastmail: https://www.fastmail.com
+
+---
+
+## 📌 Notes
+
+- DNS records in this experiment are temporary and expire after ~1 week
+- This setup is for educational purposes only
+- Not intended for production use
+
+---
+
+## 🎯 Summary
+
+This lab demonstrated a full end-to-end understanding of DNS by configuring both:
+
+- A working website via CNAME records
+- A working email system via MX records
+
+Together, they show how DNS underpins nearly all internet communication.
