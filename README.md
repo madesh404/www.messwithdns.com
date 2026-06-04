@@ -237,9 +237,33 @@ DNS acts as the **address book of the internet**, mapping human-readable domain 
 
 ## 🎯 Summary
 
-This lab demonstrated a full end-to-end understanding of DNS by configuring both:
+This project provided hands-on experience configuring and testing DNS records in a real-world environment.
 
-- A working website via CNAME records
-- A working email system via MX records
+The completed setup included:
 
-Together, they show how DNS underpins nearly all internet communication.
+* A website hosted through Netlify using a CNAME record.
+* A custom email address hosted through Fastmail using MX records.
+* SPF and DKIM authentication records that successfully passed validation tests.
+
+Successful verification of:
+
+```text
+SPF=PASS
+DKIM=PASS
+```
+
+confirmed that both email routing and email authentication were functioning correctly.
+
+Through these experiments, I gained practical experience with:
+
+* DNS resolution
+* CNAME records
+* MX records
+* TXT records
+* Email delivery (SMTP)
+* SPF authentication
+* DKIM authentication
+* Domain verification and internet infrastructure
+
+This project demonstrates how DNS supports website hosting, email delivery, and secure email authentication across the modern internet.
+
