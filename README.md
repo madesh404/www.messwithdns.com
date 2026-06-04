@@ -1,4 +1,4 @@
-# 🌐 Mess With DNS Experiment: Website + Email Routing
+# 🌐 Mess With DNS Experiment: Website + Email Routing & Authentication
 
 ## 📌 Overview
 
