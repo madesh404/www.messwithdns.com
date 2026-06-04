@@ -197,10 +197,6 @@ The receiving mail server retrieves the public key from DNS and verifies the sig
 
 # 🔍 What This Experiment Proved
 
-This project demonstrates that DNS is not just for websites.
-
-It routes multiple types of internet services:
-
 | Service | DNS Record Type | Example |
 |--------|----------------|--------|
 | Website | CNAME / A record | Netlify hosting |
