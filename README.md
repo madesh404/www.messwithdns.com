@@ -86,6 +86,13 @@ Email routing worked successfully using DNS MX records.
 
 ---
 
-- A working email system via MX records
+## 🧠 Key Concept Learned
 
-Together, they show how DNS underpins nearly all internet communication.
+- **MX records** define mail servers responsible for receiving email.
+- DNS is used to route email traffic before SMTP delivery begins.
+- Email delivery relies on multiple systems working together:
+- DNS (routing)
+- SMTP (sending)
+- Mail server (storage)
+
+---
